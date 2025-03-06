@@ -1,25 +1,18 @@
-/ Define the interface
 interface Playable {
     void play();
 }
-
-// Implement the interface in the Guitar class
 class Guitar implements Playable {
     @Override
     public void play() {
         System.out.println("Playing the Guitar.");
     }
 }
-
-// Implement the interface in the Piano class
 class Piano implements Playable {
     @Override
     public void play() {
         System.out.println("Playing the Piano.");
     }
 }
-
-// Demonstrate calling the play() method
 public class Main {
     public static void main(String[] args) {
         Playable guitar = new Guitar();
@@ -29,5 +22,4 @@ public class Main {
         piano.play();
     }
 }
-Great!Fixed!Got it, thanks!
 
