@@ -1,1 +1,27 @@
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle is starting...");
+    }
+}
+class Car extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("Car is starting with an engine...");
+    }
+}
+class Bike extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("Bike is starting with a kick...");
+    }
+}
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        Vehicle myVehicle;
 
+        myVehicle = new Car();
+        myVehicle.start(); 
+        myVehicle = new Bike();
+        myVehicle.start();
+    }
+}
