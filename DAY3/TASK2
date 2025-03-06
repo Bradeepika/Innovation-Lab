@@ -1,1 +1,25 @@
+class Book {
+    String title;
+    String author;
+    public Book() {
+        this.title = "Ponniyin Selvan";
+        this.author = " Kalki Krishnamurthy";
+  }
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+    public void displayDetails() {
+        System.out.println("Title: " + this.title + ", Author: " + this.author);
+    }
 
+    public static void main(String[] args) {
+        Book book1 = new Book();  
+        Book book2 = new Book("Thirukkural", "Thiruvalluvar");  
+        System.out.println("Book 1 Details:");
+        book1.displayDetails();
+
+        System.out.println("\nBook 2 Details:");
+        book2.displayDetails();
+    }
+}
