@@ -1,1 +1,35 @@
 
+class Computer {
+    class Processor {
+        void showProcessor() {
+            System.out.println("Processor is working...");
+        }
+    }  
+    void startComputer() {
+        class RAM {
+            void showRAM() {
+                System.out.println("RAM is initialized...");
+            }
+        }
+        RAM ram = new RAM();
+        ram.showRAM();
+    }
+}
+
+public class InnerClassDemo {
+    public static void main(String[] args) {
+        Computer comp = new Computer();
+        Computer.Processor proc = comp.new Processor();
+        proc.showProcessor(); 
+        comp.startComputer();
+        Runnable task = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Anonymous inner class implementing Runnable is running...");
+            }
+        };
+
+        Thread thread = new Thread(task);
+        thread.start();
+    }
+}
